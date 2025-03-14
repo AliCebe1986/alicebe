@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Cebe</title>
+    <meta name="description" content="Ali Cebe Portfolio" />
+    <meta name="author" content="Ali Cebe" />
+    <meta property="og:image" content="/og-image.png" />
+    <!-- Fix CSS path - change from absolute to relative path -->
+    <link rel="stylesheet" href="./src/index.css">
+    <!-- Remove any incorrect preload references -->
+    <!-- <link rel="preload" href="alicebe/src/index.css" as="style"> -->
+    <!-- Prevent Flash of Unstyled Content -->
+    <style>
+      body {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- Fix JavaScript path - change from absolute to relative path -->
+    <!-- Replace the current script tag with one of these options depending on your actual file location -->
+    <script type="module" src="./main.tsx"></script>
+    <!-- OR -->
+    <script type="module" src="src/main.tsx"></script>
+    <!-- OR -->
+    <script type="module" src="dist/main.js"></script> <!-- If using a build tool -->
+    <!-- Make content visible once DOM is ready -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.style.visibility = 'visible';
+      });
+    </script>
+  </body>
+</html>
